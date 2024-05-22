@@ -4,6 +4,7 @@ __all__ = ['log_calls']
 __version__ = '0.1.0'
 __description__ = 'Кэширует результаты функции с ограничением на размер кэша.'
 
+
 def lru_cache(maxsize=128):
     def decorator_lru_cache(func):
         cache = {}
@@ -27,6 +28,7 @@ def lru_cache(maxsize=128):
         return wrapper_lru_cache
 
     return decorator_lru_cache
+
 
 if __name__ == '__main__':
     @lru_cache(maxsize=2)
