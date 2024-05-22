@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='llt',  # Замените на имя вашего пакета
+    name='pyllt',  # Замените на имя вашего пакета
     version='0.1.0',  # Замените на текущую версию вашего пакета
     author='mssnskyi',  # Ваше имя
     author_email='_',  # Ваш email
