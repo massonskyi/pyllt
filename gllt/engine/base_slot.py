@@ -8,7 +8,7 @@ class BaseSlot:
         """
         Initialize the slot
         """
-        raise NotImplementedError
+        pass
 
     def __call__(self, *args, **kwargs):
         """

@@ -8,7 +8,7 @@ class BaseSignal:
         """
         Initialize the signal object
         """
-        raise NotImplementedError
+        pass
 
     def connect(self, slot: object | Callable):
         """

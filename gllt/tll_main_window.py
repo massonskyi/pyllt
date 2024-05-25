@@ -5,6 +5,7 @@ from OpenGL.GLU import *
 from gllt.engine.base_widget import BaseWidget
 
 
+
 class TllMainWindow:
     def __init__(self, title, width, height):
         self.width = width
@@ -35,6 +36,9 @@ class TllMainWindow:
             widget.draw()
 
         glutSwapBuffers()
+        error = glGetError()
+        if error != GL_NO_ERROR:
+            print(f"OpenGL error during render: {gluErrorString(error)}")
 
     def key_pressed(self, key, x, y):
         for widget in self.widgets:
