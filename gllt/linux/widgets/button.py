@@ -4,7 +4,7 @@ from OpenGL.raw.GL.VERSION.GL_1_0 import glColor3f, glVertex2f, glRasterPos2f
 from OpenGL.raw.GL.VERSION.GL_4_0 import GL_QUADS
 from OpenGL.raw.GLUT import GLUT_LEFT_BUTTON, glutBitmapCharacter
 
-from gllt.engine.base_widget import BaseWidget
+from gllt.linux.engine.base_widget import BaseWidget
 from .signal import Signal
 
 

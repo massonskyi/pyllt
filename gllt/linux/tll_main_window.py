@@ -1,9 +1,7 @@
-import ctypes
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
-from gllt.engine.base_widget import BaseWidget
-
+from gllt.linux.engine.base_widget import BaseWidget
 
 
 class TllMainWindow:

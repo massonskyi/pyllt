@@ -76,12 +76,12 @@ class PrettyPrinter:
 printer = PrettyPrinter()
 
 # Настройка шрифта и цвета
-printer.set_color("green")
+printer.set_color("red")
 printer.set_style("bold")
 
 # Печать текста
 printer.print_text("Hello, World!")
-
+printer.set_color("blue")
 # Печать таблицы
 data = [
     ["Alice", 30, "New York", 22],
@@ -93,7 +93,7 @@ printer.print_table(data, headers)
 
 # Рисование графика
 import numpy as np
-
+printer.set_color("green")
 x = list(range(50))
 y = [np.sin(i / 5.0) for i in x]
 printer.draw_plot(x, y, title="Sine Wave", xlabel="Time", ylabel="Amplitude")

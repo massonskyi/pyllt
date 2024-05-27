@@ -1,4 +1,4 @@
-from gllt.engine.base_widget import BaseWidget
+from gllt.linux.engine.base_widget import BaseWidget
 
 
 class Label(BaseWidget):

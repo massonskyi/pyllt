@@ -44,6 +44,7 @@ if __name__ == "__main__":
 
     print(timer)  # Выведет "Elapsed time is 1.0 s"
 
+
     # Измерение времени выполнения конкретной функции
     @TimeitPtr.timeit
     def my_function():

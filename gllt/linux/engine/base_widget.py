@@ -1,5 +1,3 @@
-__all__ = ['BaseWidget']
-
 from abc import ABC, abstractmethod
 
 

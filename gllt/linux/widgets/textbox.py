@@ -1,8 +1,8 @@
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
-from gllt.engine.base_widget import BaseWidget
-from gllt.widgets.signal import Signal
+from gllt.linux.engine.base_widget import BaseWidget
+from gllt.linux.widgets.signal import Signal
 from OpenGL.GLUT import fonts
 
 

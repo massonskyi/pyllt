@@ -43,6 +43,10 @@ if __name__ == "__main__":
 
     callbacks = CallbackFactory()
     callbacks.register('MyClass', MyClass)
+    callbacks.register('add', lambda x, y: x + y)
 
     obj = callbacks.create('MyClass', 10)
-    print(obj.value)  # Output: 10
+    callbacks = [callbacks.create("add", it, ij) for it, ij in zip(range(0, 10), range(1, 11))]
+    for callback in callbacks:
+        print(callback)  # Output: 1,3,5,7,9,11,13,15,17,19
+
