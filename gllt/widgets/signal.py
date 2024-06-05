@@ -1,7 +1,7 @@
 __all__ = ['Signal']
 
 from typing import List, Callable
-from gllt.engine.base_signal import BaseSignal
+from pyllt.gllt.engine.base_signal import BaseSignal
 
 
 class Signal(BaseSignal):

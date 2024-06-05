@@ -2,7 +2,7 @@ __all__ = ['Slot']
 
 from typing import Callable
 
-from gllt.engine.base_slot import BaseSlot
+from pyllt.gllt.engine.base_slot import BaseSlot
 
 
 class Slot(BaseSlot):

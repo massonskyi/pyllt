@@ -2,15 +2,15 @@ import ctypes
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
-from gllt.engine.base_widget import BaseWidget
-
+from pyllt.gllt.engine.base_widget import BaseWidget
 
 
 class TllMainWindow:
-    def __init__(self, title, width, height):
+    def __init__(self, title, width, height, color=(1.0, 1.0, 1.0)):
         self.width = width
         self.height = height
         self.widgets = []
+        self.color = color
 
         glutInit()
         glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH)
@@ -20,6 +20,7 @@ class TllMainWindow:
         glutIdleFunc(self.render)
         glutKeyboardFunc(self.key_pressed)
         glutMouseFunc(self.mouse_clicked)
+        glutPassiveMotionFunc(self.mouse_moved)
 
     def add_widget(self, widget: BaseWidget):
         self.widgets.append(widget)
@@ -28,6 +29,7 @@ class TllMainWindow:
         glutMainLoop()
 
     def render(self):
+        glClearColor(*self.color, 1.0)
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
         glLoadIdentity()
         glOrtho(0, self.width, 0, self.height, -1, 1)
@@ -48,3 +50,7 @@ class TllMainWindow:
         if state == GLUT_DOWN:
             for widget in self.widgets:
                 widget.handle_mouse_event(button, state, x, self.height - y)
+
+    def mouse_moved(self, x, y):
+        for widget in self.widgets:
+            widget.handle_mouse_move(x, self.height - y)
