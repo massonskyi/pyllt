@@ -1,6 +1,5 @@
 __all__ = ['Command']
 
-
 class Command(object):
     """
     This is the base class for all commands
