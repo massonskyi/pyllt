@@ -1,6 +1,11 @@
 __all__ = ['BaseWidget']
 
 from abc import ABC, abstractmethod
+from OpenGL.GL import glBegin, glEnd
+from OpenGL.GLUT import fonts
+from OpenGL.raw.GL.VERSION.GL_1_0 import glColor3f, glVertex2f, glRasterPos2f, GL_TRIANGLE_FAN
+from OpenGL.raw.GL.VERSION.GL_4_0 import GL_QUADS
+from OpenGL.raw.GLUT import GLUT_LEFT_BUTTON, glutBitmapCharacter, GLUT_DOWN, GLUT_UP, glutBitmapWidth
 
 
 class BaseWidget(ABC):
@@ -19,9 +24,23 @@ class BaseWidget(ABC):
         raise NotImplementedError
 
     @abstractmethod
+    def handle_mouse_move(self, x, y):
+        """
+        Handle mouse move
+        """
+        raise NotImplementedError
+
+    @abstractmethod
     def draw(self):
         """
         Draw the widget on the screen
+        """
+        raise NotImplementedError
+
+    @abstractmethod
+    def apply_css(self, css_parser, css_class):
+        """
+        Apply CSS to the widget
         """
         raise NotImplementedError
 
@@ -38,7 +57,6 @@ class BaseWidget(ABC):
         Draw a rounded rectangle on the screen
         """
         raise NotImplementedError
-
     @abstractmethod
     def draw_text(self, x, y, text):
         """
