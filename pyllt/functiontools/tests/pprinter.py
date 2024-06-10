@@ -13,7 +13,7 @@
 #         "normal": "\033[22m"
 #     }
 #
-#     def __init__(self):
+#     def pyllt(self):
 #         self.color = self.COLORS["reset"]
 #         self.style = self.STYLES["normal"]
 #

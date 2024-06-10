@@ -1,0 +1,21 @@
+[tool.setuptools]
+packages = ["pyllt"]
+
+[project]
+name = "pyllt"
+version = "0.1"
+authors = [
+  { name="Massonskyi", email="nonset999@mail.begin" },
+]
+description = "A simple example package"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/massonskyi/pyllt"
+"Bug Tracker" = "https://github.com/massonskyi/pyllt/issues"

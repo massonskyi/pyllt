@@ -38,4 +38,4 @@ if __name__ == '__main__':
         pass
 
 
-    print(Base.registry['MyClass'].__dict__)  # {'__module__': '__main__', '__doc__': None, '__init__': <function __init_subclass__ at 0x7f9b8b4b9e10>, '__new__': <function Meta.__new__ at 0x7f9b8b4])  # {'MyClass': <class '__main__.MyClass'>, 'AnotherClass': <class '__main__.AnotherClass'>}
+    print(Base.registry['MyClass'].__dict__)  # {'__module__': '__main__', '__doc__': None, 'pyllt': <function __init_subclass__ at 0x7f9b8b4b9e10>, '__new__': <function Meta.__new__ at 0x7f9b8b4])  # {'MyClass': <class '__main__.MyClass'>, 'AnotherClass': <class '__main__.AnotherClass'>}
